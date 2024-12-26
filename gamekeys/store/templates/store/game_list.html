@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% extends 'store/base.html' %}
+
+    {% block content %}
+    <div class="text-center">
+        <h1>Добро пожаловать в GameStore!</h1>
+        <p>Лучшие игры на любой вкус!</p>
+        <a href="/store/" class="btn btn-primary">Перейти в магазин</a>
+    </div>
+    {% endblock %}
+    {% for game in games %}
+    <h2>{{ game.name }}</h2>
+    <p>{{ game.description }}</p>
+    <a href="/{{ game.id }}/">Подробнее</a>
+    {% endfor %}
+</body>
+</html>
