@@ -1,5 +1,7 @@
-from django.shortcuts import render
-from .models import Game
+from django.shortcuts import render, redirect, get_object_or_404
+from .models import Game, Cart
+from .cart import Cart  # Импорт вашей корзины (если используется)
+
 
 def game_list(request):
     games = Game.objects.all()  # Получаем список всех игр
@@ -21,3 +23,15 @@ def cart(request):
     cart_items = []  # Получение корзины (пока пусто)
     total_price = sum(item.game.price for item in cart_items)
     return render(request, 'store/cart.html', {'cart_items': cart_items, 'total_price': total_price})
+
+def add_to_cart(request, pk):
+    game = get_object_or_404(Game, pk=pk)  # Получаем игру
+    cart = Cart(request)  # Подключаем корзину
+    cart.add(game)  # Добавляем игру в корзину
+    return redirect('game_list')  # Возвращаемся на страницу магазина
+
+def cart_view(request):
+    if not request.user.is_authenticated:
+        return redirect("login")
+    cart, created = Cart.objects.get_or_create(user=request.user)
+    return render(request, "store/cart.html", {"cart": cart})

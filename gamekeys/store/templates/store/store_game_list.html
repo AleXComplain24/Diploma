@@ -18,7 +18,7 @@
                     <h5 class="card-title">{{ game.name }}</h5>
                     <p class="card-text">{{ game.description|truncatewords:20 }}</p>
                     <p class="card-text">Цена: ${{ game.price }}</p>
-                    <a href="/{{ game.id }}/" class="btn btn-primary">Подробнее</a>
+                    <a href="/{{ game.id }}/add_to_cart/" class="btn btn-primary">Добавить в корзину</a>
                 </div>
             </div>
         </div>
