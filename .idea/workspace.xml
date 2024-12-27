@@ -5,19 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4229a9b5-4852-463c-abee-9085a63a1720" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/gamekeys/store/templates/registration/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gamekeys/store/templatetags/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gamekeys/store/templatetags/cart_filters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game_store/app/ static/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game_store/app/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game_store/app/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game_store/app/templates/cart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game_store/app/templates/catalog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game_store/app/templates/checkout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game_store/app/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gamekeys/store/templates/store/checkout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gamekeys/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/gamekeys/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gamekeys/gamekeys/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/gamekeys/gamekeys/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gamekeys/store/cart.py" beforeDir="false" afterPath="$PROJECT_DIR$/gamekeys/store/cart.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gamekeys/store/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/gamekeys/store/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gamekeys/store/migrations/0002_cart.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gamekeys/store/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/gamekeys/store/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gamekeys/store/templates/store/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/gamekeys/store/templates/store/cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gamekeys/store/templates/store/game_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/gamekeys/store/templates/store/game_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gamekeys/store/templates/store/store_game_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/gamekeys/store/templates/store/store_game_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gamekeys/store/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/gamekeys/store/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gamekeys/store/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/gamekeys/store/views.py" afterDir="false" />
     </list>
@@ -29,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>

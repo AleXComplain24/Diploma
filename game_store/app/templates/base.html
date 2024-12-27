@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Game Store{% endblock %}</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <nav>
+        <a href="/">Главная</a>
+        <a href="/catalog">Каталог</a>
+        <a href="/cart">Корзина</a>
+    </nav>
+    <div>
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

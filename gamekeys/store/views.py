@@ -39,11 +39,11 @@ def remove_from_cart(request, game_id):
     """
     Удаление игры из корзины пользователя.
     """
-    game = get_object_or_404(Game, pk=pk)  # Получаем игру
-    cart_item = Cart.objects.filter(user=request.user, game=game).first()  # Получаем элемент корзины
-    if cart_item:
-        cart_item.delete()  # Удаляем запись из корзины
-    return redirect('cart')  # Перенаправляем на страницу корзины
+    if request.method == "POST":
+        # Получаем элемент корзины с указанным game_id
+        cart_item = get_object_or_404(Cart, game_id=game_id)
+        cart_item.delete()  # Удаляем элемент корзины
+    return redirect('cart')  # Перенаправляем пользователя обратно в корзину
 
 
 def game_list(request):
@@ -60,3 +60,26 @@ def game_detail(request, pk):
     """
     game = get_object_or_404(Game, pk=pk)  # Получаем конкретную игру
     return render(request, 'store/game_detail.html', {'game': game})  # Передаем игру в шаблон
+
+@login_required
+def checkout(request):
+    """
+    Страница оформления заказа.
+    """
+    cart_items = Cart.objects.filter(user=request.user)
+    total_price = sum(item.game.price * item.quantity for item in cart_items)
+    return render(request, 'store/checkout.html', {
+        'cart_items': cart_items,
+        'total_price': total_price,
+    })
+
+def process_order(request):
+    """
+    Обработка заказа после нажатия на кнопку подтверждения.
+    """
+    if request.method == 'POST' and request.user.is_authenticated:
+        # Здесь вы можете реализовать логику для обработки заказа
+        # Например: сохранить данные о заказе в базе данных
+        Cart.objects.filter(user=request.user).delete()  # Очищаем корзину после оформления заказа
+        return redirect('game_list')  # Перенаправляем пользователя на главную страницу или список игр
+    return redirect('checkout')  # В случае GET-запроса или ошибки возвращаемся на страницу оформления
