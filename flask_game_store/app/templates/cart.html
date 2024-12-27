@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends "base.html" %}
+{% block title %}Корзина{% endblock %}
+{% block content %}
+<h1>Ваша корзина</h1>
+{% if cart %}
+<ul>
+    {% for item in cart %}
+    <li>
+        {{ item.name }} - ${{ item.price }}
+        <form method="post" action="{{ url_for('remove_from_cart', game_id=item.id) }}">
+            <button type="submit">Удалить</button>
+        </form>
+    </li>
+    {% endfor %}
+</ul>
+<p>Итого: ${{ total_price }}</p>
+<a href="{{ url_for('checkout') }}">Перейти к оформлению</a>
+{% else %}
+<p>Корзина пуста. <a href="{{ url_for('catalog') }}">Вернуться в каталог</a></p>
+{% endif %}
+{% endblock %}
+
+</body>
+</html>

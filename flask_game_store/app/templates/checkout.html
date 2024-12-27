@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends "base.html" %}
+{% block title %}Оформление заказа{% endblock %}
+{% block content %}
+<h1>Оформление заказа</h1>
+<ul>
+    {% for item in cart %}
+    <li>{{ item.name }} - ${{ item.price }}</li>
+    {% endfor %}
+</ul>
+<p>Итого: ${{ total_price }}</p>
+<form method="post" action="{{ url_for('confirm_order') }}">
+    <button type="submit">Подтвердить заказ</button>
+</form>
+{% endblock %}
+
+</body>
+</html>
