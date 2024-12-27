@@ -52,10 +52,17 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'gamekeys.urls'
 
+
+# Настройки аутентификации
+LOGIN_URL = '/login/'  # URL для страницы входа
+LOGIN_REDIRECT_URL = '/'  # URL для перенаправления после успешного входа
+LOGOUT_REDIRECT_URL = '/'  # URL для перенаправления после выхода
+
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

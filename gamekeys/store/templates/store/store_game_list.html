@@ -1,29 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    {% extends 'store/base.html' %}
+{% extends 'store/base.html' %}
 
 {% block content %}
-    <h1>Магазин</h1>
-    <div class="row">
-        {% for game in games %}
-        <div class="col-md-4">
-            <div class="card mb-4">
-                <img src="https://via.placeholder.com/150" class="card-img-top" alt="Game Image">
-                <div class="card-body">
-                    <h5 class="card-title">{{ game.name }}</h5>
-                    <p class="card-text">{{ game.description|truncatewords:20 }}</p>
-                    <p class="card-text">Цена: ${{ game.price }}</p>
-                    <a href="/{{ game.id }}/add_to_cart/" class="btn btn-primary">Добавить в корзину</a>
+    <div class="container mt-5">
+        <h1>Магазин</h1>
+        <div class="row">
+            {% for game in games %}
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <!-- Проверяем, есть ли изображение у игры -->
+                    {% if game.image %}
+                    <img src="{{ game.image.url }}" class="card-img-top" alt="{{ game.name }}">
+                    {% else %}
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Game Image">
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ game.name }}</h5>
+                        <p class="card-text">{{ game.description|truncatewords:20 }}</p>
+                        <p class="card-text"><strong>Цена:</strong> ${{ game.price }}</p>
+                        <a href="/{{ game.id }}/add_to_cart/" class="btn btn-primary">Добавить в корзину</a>
+                    </div>
                 </div>
             </div>
+            {% empty %}
+            <p>Игры пока отсутствуют. <a href="/store/">Вернуться на главную</a></p>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
 {% endblock %}
-</body>
-</html>

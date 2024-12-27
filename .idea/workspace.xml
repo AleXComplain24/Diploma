@@ -5,16 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4229a9b5-4852-463c-abee-9085a63a1720" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/gamekeys/add_games.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gamekeys/store/templates/registration/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gamekeys/store/templatetags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gamekeys/store/templatetags/cart_filters.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gamekeys/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/gamekeys/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gamekeys/gamekeys/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/gamekeys/gamekeys/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamekeys/store/cart.py" beforeDir="false" afterPath="$PROJECT_DIR$/gamekeys/store/cart.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamekeys/store/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/gamekeys/store/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamekeys/store/migrations/0002_cart.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/gamekeys/store/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/gamekeys/store/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gamekeys/store/templates/store/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/gamekeys/store/templates/store/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gamekeys/store/templates/store/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/gamekeys/store/templates/store/cart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gamekeys/store/templates/store/game_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/gamekeys/store/templates/store/game_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gamekeys/store/templates/store/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/gamekeys/store/static/store/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamekeys/store/templates/store/store_game_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/gamekeys/store/templates/store/store_game_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gamekeys/store/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/gamekeys/store/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gamekeys/store/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/gamekeys/store/views.py" afterDir="false" />
     </list>
@@ -34,36 +37,39 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "AleXComplain24"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;AleXComplain24&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/AleXComplain24/Diploma.git",
-    "accountId": "19efd2b0-7335-4cc3-b954-efba421b0c91"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/AleXComplain24/Diploma.git&quot;,
+    &quot;accountId&quot;: &quot;19efd2b0-7335-4cc3-b954-efba421b0c91&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2qk3SFifjdCuN5XDD8hxjbNCuVK" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Python.activate_this.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Python.activate_this.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Python Projects\Diploma\gamekeys\store\static\store" />
@@ -137,6 +143,20 @@
       <updated>1735192743567</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

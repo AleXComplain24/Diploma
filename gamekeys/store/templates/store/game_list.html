@@ -7,7 +7,47 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    {% extends 'store/base.html' %} <!-- Расширение базового шаблона -->
+{% extends 'store/base.html' %} <!-- Расширение базового шаблона -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const buttons = document.querySelectorAll('.add-to-cart');
+        buttons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const gameId = button.dataset.gameId;
+
+                fetch('/add-to-cart/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                        'X-CSRFToken': '{{ csrf_token }}'
+                    },
+                    body: `game_id=${gameId}`
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.message) {
+                        button.classList.add('btn-success');
+                        button.innerText = 'Добавлено!';
+                        setTimeout(() => {
+                            button.classList.remove('btn-success');
+                            button.innerText = 'Добавить в корзину';
+                        }, 2000);
+                    }
+                });
+            });
+        });
+    });
+</script>
+
+{% for game in games %}
+<div class="game">
+    <h3>{{ game.name }}</h3>
+    <p>{{ game.description }}</p>
+    <p>Цена: {{ game.price }}</p>
+    <button class="btn btn-primary add-to-cart" data-game-id="{{ game.id }}">Добавить в корзину</button>
+</div>
+{% endfor %}
 
     {% block content %}
     <div class="text-center">
